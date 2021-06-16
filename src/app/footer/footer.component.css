@@ -1,0 +1,135 @@
+* {
+  font-family: Mulish, Helvetica, Arial, sans-serif;
+  /* background-color: aliceblue; */
+}
+
+ul {
+  list-style: none;
+  color: white;
+}
+
+ul li {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+p {
+  margin-left: 37px;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+}
+
+.phone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  margin-right: 40px;
+}
+
+h4 {
+  margin: 0px;
+  padding: 0px;
+  color: white;
+}
+
+.phone p {
+  margin: 2px;
+  font-size: 14px;
+}
+
+.phone img {
+  height: 20px;
+}
+
+.social img {
+  height: 30px;
+  /* margin-left: 5px; */
+}
+
+.contactfollow {
+  margin-left: 20px;
+}
+
+.email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+.email img {
+  height: 20px;
+}
+
+.email p {
+  margin: 2px;
+  font-size: 14px;
+}
+
+.container {
+  display: flex;
+  background-color: #1c0d04;
+  padding: 50px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.socialAbout {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0px;
+}
+
+.ninjaLogo img {
+  height: 60px;
+}
+
+.ninjaLogo {
+  height: fit-content;
+  /* flex: 1 1; */
+}
+
+.importantLinks div {
+  display: flex;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  /* color: black; */
+  /* width: 800px; */
+  margin-left: 35px;
+  margin-top: 0px;
+}
+
+.importantLinks {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.importantLinks div li {
+  list-style: none;
+  margin-bottom: 0px;
+}
+
+.importantLinks div li a {
+  text-decoration: none;
+  color: #1c0d04;
+  font-size: 11px;
+}
+
+.importantLinks p {
+  color: black;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+.importantLinks h2 {
+  margin-left: 35px;
+  font-weight: 600;
+  color: black;
+}

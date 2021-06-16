@@ -1,0 +1,35 @@
+<div class="courses">
+
+    <div class="_course" *ngFor="let data of dataSource" [ngClass]="{'careerTrack': data.discount != 0}">
+        <div>
+            <p>{{data.title}}</p>
+            <span *ngIf="data.discount != 0" [ngClass]="{'discount': data.discount != 0}">{{data.discount}}%
+                Discount</span>
+        </div>
+        <hr>
+        <a href="#" *ngFor="let subData of data.topics">
+            <li>{{subData}}</li>
+        </a>
+    </div>
+
+</div>
+
+
+
+<!-- C++ Foundation with Data Structures
+JAVA Foundation with Data Structures
+Grokking the Operating Systems Interview
+Interview Preparation Course
+Competitive Programming Course
+Python Foundation with Data Structures
+Aptitude Preparation Course -->
+
+
+
+
+<!-- Ninja Competitive Programmer Track
+Ninja Android Developer Career Track
+Ninja Web Developer Career Track - NodeJS & ReactJs
+Ninja Web Developer Career Track - NodeJS
+Ninja Data Scientist Career Track
+Ninja Machine Learning Engineer Career Track -->

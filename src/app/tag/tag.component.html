@@ -1,0 +1,15 @@
+<h2>Tags</h2>
+
+<div class="tag_list">
+
+    <div class="tags" *ngFor="let tag of tags" [ngClass]="{'selectedTag': map.has(tag) == true }"
+        (click)="selectTags(tag)">
+        {{tag}}
+    </div>
+
+</div>
+
+<div class="buttons">
+    <button mat-button (click)="close()">Close</button>
+    <button mat-button (click)="save()" color="primary">Apply</button>
+</div>

@@ -1,0 +1,125 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" [ngClass]="{ hidden: (isHandset$ | async) === false }" fixedInViewport="false"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false">
+
+    <!-- Mobile View Toolbar   -->
+
+    <mat-toolbar (click)="!drawer.toggle()"><img id="close" src="/assets/Images/cancel.png" alt=""></mat-toolbar>
+    <mat-nav-list>
+      <ul class="nav-menu">
+        <li><a mat-list-item href="#">Home</a></li>
+        <li>
+          <div class="expan">
+            <div class="expand">
+              <mat-accordion>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Practice
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <div *ngFor="let res of pracDataSource">
+                    <p>{{res.title}}</p>
+                    <hr>
+                    <a *ngFor="let topic of res.topics"
+                      href="https://www.codingninjas.com/codestudio/interview-experiences">
+        <li>{{topic}}</li>
+        </a>
+        </div>
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Courses
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div *ngFor="let data of courseData">
+            <div class="disc">
+              <p>{{data.title}}</p>
+              <span *ngIf="data.discount != 0" class="discount">{{data.discount}}% Discount</span>
+            </div>
+            <hr>
+            <a *ngFor="let res of data.topics" href="#">
+              <li>{{res}}</li>
+            </a>
+
+          </div>
+        </mat-expansion-panel>
+        </mat-accordion>
+        </div>
+        </div>
+        </li>
+
+        <li><a mat-list-item href="#">Events</a></li>
+        <li><a mat-list-item href="#">Campus Ninja</a></li>
+        <li><a href="">
+
+            <img style="margin-left: 15px;" src="https://files.codingninjas.in/cc-desktop-2-5363.svg" alt="" />
+
+
+          </a></li>
+      </ul>
+
+
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side Nav Toggle icon">menu</mat-icon>
+        <!-- <span class="material-icons">face</span> -->
+      </button>
+
+
+      <!-- Large Devices Toolbar -->
+
+
+      <img id="cnlogo" src="/assets/Images/coding-ninja-image-1024x585.jpg" alt="" />
+
+      <ul class="nav-menu-list sidenav-open">
+        <li><a mat-list-item href="#">Home</a></li>
+        <li>
+          <div class="dropDown">
+            <div class="down-arrow">
+
+              <a mat-list-item href="#">Practice</a>
+              <img src="https://files.codingninjas.in/angle-down-solid-5030.svg" alt="" />
+
+            </div>
+            <div class="practiceDD">
+              <div *ngFor="let data of pracDataSource">
+                <p>{{data.title}}</p>
+                <hr>
+                <div class="_topic" *ngFor="let topic of data.topics">
+                  <p>{{topic}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="dropDown">
+            <div class="down-arrow">
+              <a mat-list-item href="#">Course</a>
+              <img src="https://files.codingninjas.in/angle-down-solid-5030.svg" alt="" />
+            </div>
+            <app-courses></app-courses>
+          </div>
+        </li>
+        <li><a mat-list-item href="#">Events</a></li>
+        <li><a mat-list-item href="#">Campus Ninja</a></li>
+        <li><a mat-list-item href="#">Practice</a></li>
+      </ul>
+
+      <img class="sidenav-open" src="https://files.codingninjas.in/cc-desktop-2-5363.svg" alt="" />
+      <span class="spacer"></span>
+      <a id="myClass" href="">My Classroom</a>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

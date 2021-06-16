@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Mulish, Helvetica, Arial, sans-serif;
+}
+
+.mat-paginator-page-size-label {
+  display: none;
+}
+
+.mat-paginator-page-size-value {
+  display: none;
+}
+
+/* .mat-focus-indicator {
+  background-color: orange;
+  padding: 20px;
+} */
+
+.mat-paginator-navigation-next {
+  background-color: orange;
+  padding: 20px;
+}
+
+.mat-paginator-navigation-previous {
+  background-color: orange;
+  padding: 20px;
+  /* border-radius: 200px; */
+  /* height: 20px; */
+}
+
+.mat-paginator-range-actions {
+  margin-right: 200px;
+}
+
+.mat-paginator-range-label {
+  font-weight: 700;
+  color: black;
+  font-size: 20px;
+}

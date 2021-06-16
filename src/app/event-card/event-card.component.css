@@ -1,0 +1,167 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Mulish, Helvetica, Arial, sans-serif;
+}
+
+.card {
+  border-radius: 10px;
+  margin-right: 10px;
+  /* border: 1px solid grey; */
+  margin-top: 15px;
+  margin-left: 13px;
+  /* width: 50%; */
+  background-color: white;
+  box-shadow: 0 1px 19px 0 rgb(0 0 0 / 7%);
+}
+
+#event_name {
+  font-size: 18px;
+  padding: 10px;
+  font-weight: 800;
+}
+
+.card_image {
+  height: 10rem;
+  width: 100%;
+  /* background-image: url("https://files.codingninjas.in/scolarship-mobile-version-event-10896.jpg"); */
+  position: relative;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.register {
+  background-color: white;
+  border-radius: 3px;
+  font-size: 10px;
+  height: 20px;
+  width: 50%;
+  padding: 0px;
+  margin-top: 33%;
+  margin-left: 47%;
+  z-index: 9;
+}
+
+.User {
+  position: relative;
+}
+
+.user_name {
+  display: none;
+  position: absolute;
+  bottom: 30px;
+  width: max-content;
+  font-size: 10px;
+  padding: 4px;
+  color: white;
+  border-radius: 10px;
+  background-color: rgb(97, 97, 97);
+}
+
+.userImage {
+  display: flex;
+}
+
+.User:hover .user_name {
+  display: block;
+}
+
+.card_image div {
+  position: absolute;
+}
+
+#event_image {
+  width: 100%;
+  height: 150px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+/* .register h2 {
+  margin: 0px;
+  padding: 0px;
+  font-size: 0.8rem;
+} */
+
+.description {
+  width: 100%;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.event_info {
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.event_info p {
+  margin: 0px;
+  /* margin-bottom: 10px; */
+}
+
+.event_info_item {
+  /* flex: 1 1; */
+  margin-left: 20px;
+}
+
+#event_info {
+  color: rgb(161, 159, 159);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tags div {
+  background-color: #eee;
+  margin-left: 10px;
+  padding: 5px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+hr {
+  margin-top: 30px;
+}
+
+.users {
+  margin-top: 10px;
+}
+
+.registerNow {
+  margin-left: auto;
+}
+
+.registerNow img {
+  width: 7rem;
+}
+
+.registred {
+  margin-left: 10px;
+}
+
+.users_registred {
+  display: flex;
+  height: fit-content;
+  /* margin-left: auto; */
+}
+
+.users_registred img {
+  border-radius: 50px;
+  height: 25px;
+}
+
+.users {
+  display: flex;
+}
+
+@media (max-width: 960px) {
+  .card {
+    margin-right: 0px;
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+}

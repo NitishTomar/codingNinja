@@ -1,0 +1,233 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Mulish, Helvetica, Arial, sans-serif;
+}
+
+.header {
+  background-image: url("https://files.codingninjas.in/0000000000002471.png");
+  height: 245px;
+  padding-top: 75px;
+  width: 100%;
+  margin-top: 2px;
+}
+
+.header-title {
+  font-size: 60px;
+  margin-top: 2%;
+  margin-left: 7%;
+  font-weight: 500;
+  color: white;
+}
+
+.header-subtitle {
+  font-size: 20px;
+  font-weight: 300;
+  margin-left: 7%;
+  color: white;
+}
+
+.container {
+  width: 80%;
+  /* background-color: grey; */
+  height: fit-content;
+  border-radius: 10px;
+  border: 1px solid grey;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+.categories {
+  display: flex;
+  overflow: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.categories div {
+  display: flex;
+  padding: 2%;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  padding-left: 5%;
+  /* color: grey; */
+}
+
+.mainEvents {
+  cursor: pointer;
+  text-decoration: none;
+  color: grey;
+}
+
+/* .categories div a::selection {
+  cursor: pointer;
+  text-decoration: none;
+  color: orangered;
+} */
+
+.categories div a img {
+  width: 20px;
+  /* margin-bottom: 5px; */
+
+  margin-right: 5px;
+}
+
+.selected {
+  color: orangered;
+  font-weight: 500;
+  /* background-color: orange; */
+  /* font-size: 100px; */
+}
+
+.sub_categories {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  overflow: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  /* border: 1px solid grey; */
+  border-bottom: 1px solid rgb(184, 184, 184);
+  border-top: 1px solid rgb(182, 182, 182);
+  background-color: #fafafa;
+}
+
+.sub_categories div {
+  flex: 1;
+}
+
+.sub_categories img {
+  display: none;
+}
+
+.sub_categories ul {
+  /* padding: 5%; */
+  /* margin-top: 60px; */
+  padding-right: 6%;
+  padding-left: 2%;
+  display: flex;
+  padding-top: 10px;
+  list-style: none;
+  color: grey;
+}
+
+.sub_categories ul li {
+  margin-right: 60px;
+}
+
+.sub_categories ul li a {
+  text-decoration: none;
+  color: grey;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.sub_categories ul li a:focus {
+  color: orangered;
+}
+
+.event_links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  /* overflow: hidden; */
+  flex-wrap: wrap;
+  width: 90%;
+}
+
+.event_links app-event-card {
+  width: 50%;
+  /* margin-left: 2px; */
+  word-wrap: break-word;
+}
+
+.events {
+  display: flex;
+}
+
+.tag_list {
+  margin-top: 20px;
+  width: 200px;
+  height: fit-content;
+  margin-left: 30px;
+}
+
+.tag_list h2 {
+  color: rgb(114, 114, 114);
+}
+
+.tags {
+  margin-top: 10px;
+  padding: 5px;
+  width: fit-content;
+  font-weight: 50;
+
+  margin-right: 10px;
+  border-radius: 5px;
+  background-color: #eee;
+}
+
+.tags:hover {
+  cursor: pointer;
+}
+
+.selectedTag {
+  background-color: #fa7328;
+  color: white;
+}
+
+.tags p {
+  margin-top: 5px;
+}
+.temp {
+  color: green;
+}
+
+.temp1 {
+  color: orange;
+}
+
+.fab {
+  display: none;
+}
+
+/* .mat-fab {
+  padding: 0px;
+} */
+
+.contain {
+  display: flex;
+}
+
+@media (max-width: 960px) {
+  .fab {
+    display: block;
+    position: fixed;
+    left: 90%;
+    background-color: tomato;
+    /* margin-top: 50px; */
+    padding: 0px;
+    margin-right: 20px;
+    margin-top: 30vh;
+  }
+
+  .event_links {
+    display: block;
+  }
+
+  .tag_list {
+    display: none;
+  }
+
+  .sub_categories img {
+    display: block;
+    float: right;
+    height: 25px;
+    margin-top: 5px;
+  }
+}

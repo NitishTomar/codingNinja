@@ -1,0 +1,31 @@
+.tag_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tags {
+  margin-top: 10px;
+  padding: 5px;
+  width: fit-content;
+  font-weight: 50;
+
+  margin-right: 10px;
+  background-color: #eee;
+}
+
+.tags:hover {
+  cursor: pointer;
+}
+
+.selectedTag {
+  background-color: #fa7328;
+  color: white;
+}
+
+.tags p {
+  margin-top: 5px;
+}
+
+.buttons {
+  margin-top: 70px;
+}

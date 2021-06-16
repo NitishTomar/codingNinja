@@ -1,0 +1,62 @@
+<div class="card" id={{item.id}}>
+    <div class="card_image">
+        <div>
+            <img id="event_image" src={{item.cover_picture}} alt="">
+        </div>
+        <div class="register" *ngIf="isOpen">
+            Registration open till {{item.end_time | date:'d MMM, HH: mm'}}
+        </div>
+    </div>
+    <p id="event_name">{{item.name}}</p>
+    <div class="event_info">
+        <div class="event_info_item">
+            <p id="event_info">Starts On</p>
+            <p>{{item.event_start_time | date:'h a MMM d, y'}}</p>
+        </div>
+        <div class="event_info_item">
+            <p id="event_info">Entry Fees</p>
+            <p *ngIf="item.fees != 0">{{item.fees}}</p>
+            <p *ngIf="item.fees == 0">Free</p>
+        </div>
+        <div class="event_info_item">
+            <p id="event_info">Venue</p>
+            <p>{{item.venue}}</p>
+        </div>
+    </div>
+    <div class="description">
+        <p>{{item.short_desc}}</p>
+    </div>
+
+    <div class="tags">
+        <div *ngFor="let tag of item.card_tags">
+            {{tag}}
+        </div>
+    </div>
+    <hr>
+
+
+    <div class="users">
+        <div class="registred">
+            <div class="users_registred">
+                <div class="User" *ngFor="let user of item.registered_users.top_users">
+                    <div class="user_name">
+                        {{user.name}}
+                    </div>
+
+                    <div class="userImage">
+                        <img src={{user.image_url}} alt="">
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="countRegistred">
+                and {{item.registered_users.other_users_count}} more people Registred
+            </div>
+        </div>
+        <div class="registerNow">
+            <img src="https://files.codingninjas.in/0000000000001272.png" alt="">
+        </div>
+    </div>
+
+</div>
