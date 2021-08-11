@@ -1,3 +1,9 @@
+It is replica of coding ninja website.
+
+Link For The Project - https://codingninja-6c102.web.app/
+
+
+
 # NinjasAssignment
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
